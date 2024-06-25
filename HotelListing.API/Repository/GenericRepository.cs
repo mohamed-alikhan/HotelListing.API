@@ -41,7 +41,9 @@ namespace HotelListing.API.Repository
         public async Task<T> GetAsync(int? id)
         {
             if(id == null)
-            { return null; }
+            { 
+                return null; 
+            }
             return await _context.Set<T>().FindAsync(id);
         }
 
